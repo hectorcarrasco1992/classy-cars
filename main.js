@@ -21,7 +21,10 @@ class Car extends Vehicle{
     
   }
   drive(){
-    return 'Vroom. '
+    if(this.maxSpeed<180){
+
+      return 'Vroom. '
+    }else return  'Vroom. I\'m a Ferrari!'
   }
   
 }
@@ -31,11 +34,12 @@ class Ferrari extends Car {
     super(name,4,180)
     this.name = 'Ferrari'
     this.maxSpeed = 180
+    
   }
 
-  drive(){
-    return 'Vroom. I\'m a Ferrari!'
-  }
+  // drive(){
+  //   return 'Vroom. I\'m a Ferrari!'
+  // }
 
   accelerate(){
     if(this.speed<this.maxSpeed){
